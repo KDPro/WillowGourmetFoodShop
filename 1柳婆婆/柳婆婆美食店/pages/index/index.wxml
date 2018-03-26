@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class="cont">
+  <view class="shopName">
+     <view class='shopNameIN'>
+        <view class="shopNameT">柳婆婆美食作坊</view>
+        <view class="shopNameI">美食 · 手工</view>
+      </view>
+     <view class="shopHImg"><image src='../../img/mmmm.png'></image></view>
+  </view> 
+  <view class="shopList">
+    <view class="introduct">感谢大家关注柳婆婆美食作坊！十年前我们会为追求价格而惊喜，可越惊喜我们身体越受伤，添加剂、防腐剂、催生素、瘦肉精，无一例外往我们的身体里钻。我们不能改变什么，我只愿传承祖辈技艺，坚持传统工艺，真正用时间做出好味道！</view>
+    <view bindtap='getLocation'>
+      <i class="iconfont icon-dingwei"></i>
+      <text>四川省成都市高新区盛治街831号</text>
+      <i class="iconfont icon-iconfontyoujiantou"></i>
+    </view>
+    <view>
+      <i class="iconfont icon-icon165"></i>
+      <text>10:00-21:00</text>
+    </view>
+    <view bindtap='callPhone' data-phone="13408663388">
+      <i class="iconfont icon-iconfontdianhua"></i>
+      <text bindtap='callPhone' data-phone="13408663388">13408663388</text>
+      <i class="iconfont icon-iconfontyoujiantou"></i>
+    </view>
+    <view> 
+      <i class="iconfont icon-zhaopian"></i>
+      <text>门店照片</text>
+    </view>
+  </view>
+  <view class="photoNine">
+    <view class="photo">
+    <block  wx:for="{{imageList}}" wx:key="{{index}}">
+        <view class="photoC">
+          <view><image src='{{item.src}}'  
+          data-num='{{index}}' 
+          bindtap='open'></image></view>
+        </view>
+    </block>
+    </view>
+  </view>
+</view>
+<view class="scale" wx:if='{{isShow}}'>
+  <text>{{pageIndex}} / {{imageList.length}}</text>
+  <swiper current='{{current}}' 
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" 
+  interval="{{interval}}" 
+  duration="{{duration}}"
+  bindchange="currentChange">
+  <block wx:for="{{imageList}}">
+    <swiper-item bindtap='close'>
+        <image src="{{item.src}}" mode="widthFix" class="slide-image"/>
+     </swiper-item> 
+  </block>
+</swiper>
+</view>

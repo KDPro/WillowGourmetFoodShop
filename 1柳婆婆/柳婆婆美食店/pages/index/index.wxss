@@ -1,0 +1,128 @@
+/**index.wxss**/
+@import '../../fonts/iconfont.wxss';
+.cont {
+  padding:15px;
+  padding-top:0;
+}
+.shopName {
+  padding:0 0 15px 0;
+  border-bottom:1px dashed #E5E5E5;
+}
+.shopName:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+.shopNameIN {
+  float: left;
+  margin-top:5px;
+}
+.shopNameT{
+  color:black;
+  font-size:26px;
+  margin-bottom:2px;
+}
+.shopNameI {
+  font-size:14px;
+  color:#BDBDBD;
+}
+.shopHImg {
+  float:right;
+  width:60px;
+  height:60px;
+  border-radius:100%;
+}
+.shopHImg image {
+  width:100%;
+  height:100%;
+  border-radius: 100%; 
+}
+.introduct {
+  text-indent: 2em;
+  font-size:14px;
+}
+.shopList {
+  padding:15px 0 10px 0;
+}
+.shopList view {
+  color:#505050;
+  width:100%;
+  padding:10px 0;
+}
+.shopList view i{
+  color:#dcdcdc;
+  font-size:16px;
+  /* vertical-align: middle; */
+}
+.shopList view i:last-child{
+  float:right;
+  font-size:22px;
+  margin-top:-1px;
+}
+.shopList view text {
+  margin-left:10px;
+  font-size:16px;
+}
+.shopList .icon-iconfontdianhua{
+  margin-top:2px;
+}
+.photo {
+  display: flex;
+  margin-bottom:3px;
+  flex-flow: row wrap;
+}
+.photoC {
+  min-width:30%;
+  flex: 1;
+  margin-right:3px;
+  margin-bottom:3px;
+}
+.photoC view {
+  width:100%;
+  padding-bottom:100%; 
+  position:relative;
+}
+.photoC view image{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%; 
+}
+.scale {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: #000;
+}
+  .scale swiper {
+   display:initial;
+}  
+  .scale image { 
+  position:absolute;  
+  width:100%;
+  height:auto; 
+  transform: translate(0,-50%);
+  top:50%; 
+  left:0;  
+} 
+.scale text {
+  position:absolute;
+  top:5px;
+  width:100%;
+  color:white;
+  font-size:12px;
+  text-align: center;
+  display: block;
+}
+
+/* .backdrop{
+  background: rgba(0, 0, 0, 1);
+  width:100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+} */
